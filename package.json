@@ -1,0 +1,16 @@
+{
+  "name": "kodak",
+  "version": "1.0.0",
+  "description": "clone website kodak",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -wr src/style.scss ./style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

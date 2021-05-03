@@ -1,0 +1,89 @@
+#sns {
+    margin-bottom: 8rem;
+    text-align: center;
+    .title {
+        @include text-style(24);
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .sns-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 4rem;
+
+        .sns-addmenu,.sns-item {
+            width: 300px;
+            height: 300px;
+            margin: 2rem; 
+            
+            @include responsive(D) {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .sns-addmenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: rotate(-5deg);
+            }
+        }
+        .sns-item {
+            padding: 2rem;
+            border: 1px solid black;
+            box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+            text-align: left;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 1px 4px 3px rgba(0,0,0,.5);
+            }
+        
+            &-img {
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+                
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    
+                }
+            }
+
+            &-text {
+                font-family: 'InkLipquid';
+                position: relative;
+                @include text-style(18);
+                .username {
+                    display: block;
+                    margin-top: 1rem;
+                }
+                .useritem a{
+                    font-weight: 800;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+                .btn-sns {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            
+        }
+    }
+    .btn-link {
+        margin: 0 auto;
+    }
+
+}

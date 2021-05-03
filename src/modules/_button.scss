@@ -1,0 +1,64 @@
+%btn-base {
+    @include inline-flexbox;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    transition: 300ms ease-in-out;
+}
+
+// size
+.btn-32 {
+    @include text-style-14;
+    height: 32px;
+}
+.btn-40 {
+    @include text-style-16;
+    height: 40px;
+}
+.btn-48 {
+    @include text-style-18;
+    height: 48px;
+}
+
+// color style
+
+.btn-primary {
+    @extend %btn-base;
+    background: $primary;
+    color: $main;
+    
+    &.active,
+    &:hover {
+        background: $primary-light;
+    }
+}
+.btn-secondary {
+    @extend %btn-base;
+    background: $secondary;
+    color: $white;
+    
+    &.active,
+    &:hover {
+        background: $secondary-light;
+    }
+}
+.btn-outline {
+    @extend %btn-base;
+    border: 2px solid $primary;
+    background: white;
+    color: $main;
+
+    &.active,
+    &:hover {
+        background: $primary;
+        border: 2px solid transparent;
+    }
+}
+// shape 
+
+.btn-tap {
+    border-radius: 0;
+    font-weight: 600;
+}

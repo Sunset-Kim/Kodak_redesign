@@ -1,0 +1,59 @@
+.rnb {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 200px;
+    top: 50px;
+    background: $primary;
+    box-shadow: -2px 2px 4px rgba(0,0,0,.3);
+
+    transform: translateX(200px);
+    transition: .3s ease-in-out;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .rnb-list {
+        width: 100%;
+        text-transform: uppercase;
+        margin-top: 50p;
+        
+        &-item a {
+            @include text-style(18);
+            display: block;
+            width: 100%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                background: #000;
+                color: $primary;
+            }
+        }
+    }
+
+    .rnb-btn-group {
+        margin-top: 2rem;
+        display: flex;
+        transition: .3s ease-in-out;
+
+        a {
+            font-size: 2rem;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.main-banner {
+    max-height: 100vh;
+    margin-bottom: 10rem;
+    .swiper-container {
+        max-height: 100vh;
+        .swiper-slide {
+            
+            img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                object-position: bottom;
+            }
+        }
+    }
+}
